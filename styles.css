@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Young+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Young+Serif&display=swap');
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+    --clr-primary-darkGreen: hsl(158, 36%, 37%);
+    --clr-primary-cream: hsl(30, 38%, 92%);
+    --clr-neutral-darkBlue: hsl(212, 21%, 14%);
+    --clr-neutral-darkGrayBlue: hsl(228, 12%, 48%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --font-montserrat: "Montserrat", serif;
+    --font-fraunces: "Fraunces", serif;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin-block-end: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+body {
+    background-color: var(--clr-primary-cream);
+    font-size: 14px;
+    min-height: 100vh;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+  }
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+:target {
+    scroll-margin-block: 5ex;
+}
+
+.container {
+    background-color: var(--clr-neutral-white);
+    border-radius: 8px;
+    max-width: 343px;
+}
+
+.image-container img {
+  border-radius: 8px 8px 0 0;
+}
+
+#product-type {
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.4rem;
+  color: var(--clr-neutral-darkGrayBlue);
+}
+
+.description {
+  padding: 1rem 1.5rem;
+}
+
+.description h1 {
+  margin-top: 0.5rem;
+  font-family: var(--font-fraunces);
+  color: var(--clr-neutral-darkBlue);
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.description p {
+  font-family: var(--font-montserrat);
+  color: var(--clr-neutral-darkGrayBlue);
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.cost {
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cost h1 {
+  font-family: var(--font-fraunces);
+  font-size: 32px;
+  color: var(--clr-primary-darkGreen);
+  margin-top: 0;
+  padding-right: 1rem;
+}
+
+.cost p {
+  margin-top: 0;
+  text-decoration: line-through;
+  color: var(--clr-neutral-darkGrayBlue);
+  font-family: var(--font-montserrat);
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.cta button{
+  border: none;
+  background-color: var(--clr-primary-darkGreen);
+  width: 100%;
+  margin: 0.5rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.cta button span{
+  color: var(--clr-neutral-white);
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  padding: 0 0.2rem;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 375px){
+  .container {
+    display: flex;
+    flex-direction: row;
+    max-width: 600px;
+    height: auto;
+    width: 100%;
+    min-height: 450px;
+  }
+
+  .description {
+    padding: 1rem 1.7rem;
+  }
+
+  .description h1 {
+    margin-top: 1rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .image-container {
+    flex: 1;
+    height: auto;
+    width: 100%
+  }
+
+  .card-content {
+    flex: 1;
+  }
+
+  .image-container picture,
+  .image-container img {
+    border-radius: 8px 0 0 8px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .cost {
+    padding: 0.5rem 1.7rem;
+  }
+
+  .cta button {
+    margin: 1.5rem 1.7rem;
+  }
+
+
+  .cta button:hover {
+    background-color: #1A4032;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+  }
+}
