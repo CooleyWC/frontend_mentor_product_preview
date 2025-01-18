@@ -10,6 +10,14 @@
 }
 
 :root {
+
+    /* type */
+    --fs--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    --fs--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+    --fs-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    --fs-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+
+    /* colors */
     --clr-primary-darkGreen: hsl(158, 36%, 37%);
     --clr-primary-cream: hsl(30, 38%, 92%);
     --clr-neutral-darkBlue: hsl(212, 21%, 14%);
@@ -108,7 +116,7 @@ textarea:not([rows]) {
   margin-top: 0.5rem;
   font-family: var(--font-fraunces);
   color: var(--clr-neutral-darkBlue);
-  font-size: 32px;
+  font-size: var(--fs-3);
   line-height: 32px;
   font-weight: 700;
 }
@@ -116,7 +124,7 @@ textarea:not([rows]) {
 .description p {
   font-family: var(--font-montserrat);
   color: var(--clr-neutral-darkGrayBlue);
-  font-size: 14px;
+  font-size: var(--fs--1);
   line-height: 23px;
 }
 
@@ -129,7 +137,7 @@ textarea:not([rows]) {
 
 .cost h1 {
   font-family: var(--font-fraunces);
-  font-size: 32px;
+  font-size: var(--fs-3);
   color: var(--clr-primary-darkGreen);
   margin-top: 0;
   padding-right: 1rem;
@@ -168,7 +176,7 @@ textarea:not([rows]) {
   font-family: var(--font-montserrat);
   font-weight: 700;
   padding: 0 0.2rem;
-  font-size: 12px;
+  font-size: var(--fs--2);
 }
 
 @media screen and (min-width: 375px){
